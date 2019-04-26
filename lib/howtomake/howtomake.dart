@@ -62,7 +62,7 @@ class HowToMakeTabPageState extends State<HowToMakeTabPage> {
           ),
         ),
         Container(
-          height: 250,
+          height: 230,
           width: double.infinity,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,

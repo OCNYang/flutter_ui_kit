@@ -10,8 +10,20 @@ class MeTabPage extends StatefulWidget {
 class MeTabPageState extends State<MeTabPage> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Me'),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Profile",
+          style: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        elevation: 0,
+      ),
+      body: Text('Meeeeeeeee'),
     );
   }
 }
