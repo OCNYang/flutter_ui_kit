@@ -1,8 +1,14 @@
 # flutter_ui_kit
 
+A new Flutter UI Kit.
+
 ![cookme](./doc/cookmefreeuikit.jpg)
 
-A new Flutter application.
+## About UI(CookMe)
+
+![cookme](./doc/cookme.png)
+
+Thanks to [Teks Mobile](https://www.behance.net/teknowledge) for sharing great recipe app UI kit.
 
 ## Getting Started
 
