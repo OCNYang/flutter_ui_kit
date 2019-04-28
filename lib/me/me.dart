@@ -108,7 +108,7 @@ class MeTabPageState extends State<MeTabPage> {
             ),
             InkWell(
               onTap: () {},
-              splashColor: Colors.brown,
+              splashColor: Colors.black12,
               child: Padding(
                 padding: EdgeInsets.only(left: 20, right: 20, top: 15, bottom: 15),
                 child: Row(
@@ -138,7 +138,7 @@ class MeTabPageState extends State<MeTabPage> {
                     ),
                     DecoratedBox(
                       decoration:
-                          BoxDecoration(color: Colors.brown, borderRadius: BorderRadius.all(Radius.circular(5))),
+                          BoxDecoration(color: Colors.brown, borderRadius: BorderRadius.all(Radius.circular(3))),
                       child: Padding(
                         padding: EdgeInsets.only(left: 10, right: 10, top: 3, bottom: 3),
                         child: Text(
@@ -153,7 +153,7 @@ class MeTabPageState extends State<MeTabPage> {
             ),
             InkWell(
               onTap: () {},
-              splashColor: Colors.brown,
+              splashColor: Colors.black12,
               child: Padding(
                 padding: EdgeInsets.only(left: 20, right: 20, top: 15, bottom: 15),
                 child: Column(
@@ -180,7 +180,7 @@ class MeTabPageState extends State<MeTabPage> {
             ),
             InkWell(
               onTap: () {},
-              splashColor: Colors.brown,
+              splashColor: Colors.black12,
               child: Padding(
                 padding: EdgeInsets.only(left: 20, right: 20, top: 15, bottom: 15),
                 child: Column(
@@ -207,7 +207,7 @@ class MeTabPageState extends State<MeTabPage> {
             ),
             InkWell(
               onTap: () {},
-              splashColor: Colors.brown,
+              splashColor: Colors.black12,
               child: Padding(
                 padding: EdgeInsets.only(left: 20, right: 20, top: 15, bottom: 15),
                 child: Column(
