@@ -12,6 +12,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         accentColor: Colors.brown,
+        brightness: Brightness.light,
+        scaffoldBackgroundColor: Colors.white,
       ),
       home: UIKitPage(),
     );

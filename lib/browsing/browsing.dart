@@ -114,7 +114,8 @@ class BrowsingTabPageState extends State<BrowsingTabPage> with SingleTickerProvi
       children: <Widget>[
         Container(
           width: double.infinity,
-          margin: EdgeInsets.only(left: 20, right: 20, bottom: 15),
+          color: Colors.white,
+          padding: EdgeInsets.only(left: 20, right: 20, bottom: 15),
           child: CupertinoSegmentedControl<int>(
             children: children,
             selectedColor: Colors.brown,
@@ -205,6 +206,10 @@ class BrowsingTabPageState extends State<BrowsingTabPage> with SingleTickerProvi
                         Icons.watch_later,
                         size: 13,
                         color: Colors.grey,
+                      ),
+                      VerticalDivider(
+                        width: 5,
+                        color: Colors.transparent,
                       ),
                       new Text(
                         '15 minute video',

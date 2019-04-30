@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_kit/details/cookdetails.dart';
 import 'package:flutter_ui_kit/other/imgConst.dart' show HEAD;
 
 class HowToMakeTabPage extends StatefulWidget {
@@ -75,7 +76,12 @@ class HowToMakeTabPageState extends State<HowToMakeTabPage> {
                   color: Colors.transparent,
                 );
               } else {
-                return getSectionItem();
+                return GestureDetector(
+                  child: getSectionItem(),
+                  onTap: () {
+                    Navigator.push(context, new MaterialPageRoute(builder: (context) => CookDetailsPage()));
+                  },
+                );
               }
             }),
             separatorBuilder: ((BuildContext context, int index) {
@@ -138,7 +144,10 @@ class HowToMakeTabPageState extends State<HowToMakeTabPage> {
                 padding: EdgeInsets.only(left: 5, right: 10),
                 child: Text(
                   '2 mint',
-                  style: TextStyle(fontSize: 14, color: Colors.grey,),
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.grey,
+                  ),
                 ),
               ),
               Icon(
@@ -150,7 +159,10 @@ class HowToMakeTabPageState extends State<HowToMakeTabPage> {
                 padding: EdgeInsets.only(left: 5, right: 10),
                 child: Text(
                   '2k',
-                  style: TextStyle(fontSize: 14, color: Colors.grey,),
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.grey,
+                  ),
                 ),
               ),
             ],
