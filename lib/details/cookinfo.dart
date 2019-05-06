@@ -38,7 +38,7 @@ class CookInfoState extends State<CookInfoPage> {
             ),
           ),
           AspectRatio(
-              aspectRatio: 1,
+              aspectRatio: 1.3,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,

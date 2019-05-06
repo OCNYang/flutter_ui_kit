@@ -40,14 +40,24 @@ class FiltersTabPageState extends State<FiltersTabPage> {
         backgroundColor: Colors.white,
         elevation: 0,
         actions: <Widget>[
-          FlatButton(
-              shape: CircleBorder(),
-              onPressed: () {},
-              child: Text(
+//          点击时的阴影有差别
+//          FlatButton(
+//              shape: CircleBorder(),
+//              onPressed: () {},
+//              child: Text(
+//                "Apply",
+//                style: TextStyle(color: Colors.grey),
+//              )),
+          IconButton(
+              icon: Text(
                 "Apply",
                 style: TextStyle(color: Colors.grey),
-              ))
+              ),
+              onPressed: () {})
         ],
+        actionsIconTheme: IconThemeData(
+          color: Colors.grey,
+        ),
       ),
       body: ListView(
         children: <Widget>[
