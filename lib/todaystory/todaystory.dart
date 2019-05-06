@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_kit/details/cookinfo.dart';
 import 'package:flutter_ui_kit/other/imgConst.dart';
 
 class TodayStoryTabPage extends StatefulWidget {
@@ -53,7 +55,9 @@ class TodayStoryTabPageState extends State<TodayStoryTabPage> {
                       color: Colors.transparent,
                     );
                   } else {
-                    return getRecommendedItemView();
+                    return GestureDetector(child: getRecommendedItemView(),onTap: (){
+                      Navigator.push(context, new CupertinoPageRoute(builder: (it)=> CookInfoPage()));
+                    },);
                   }
                 }),
                 itemCount: 10,

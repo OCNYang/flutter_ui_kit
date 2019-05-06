@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_kit/details/cookdetails.dart';
 import 'package:flutter_ui_kit/other/imgConst.dart' show HEAD;
@@ -79,7 +80,7 @@ class HowToMakeTabPageState extends State<HowToMakeTabPage> {
                 return GestureDetector(
                   child: getSectionItem(),
                   onTap: () {
-                    Navigator.push(context, new MaterialPageRoute(builder: (context) => CookDetailsPage()));
+                    Navigator.push(context, new CupertinoPageRoute(builder: (context) => CookDetailsPage()));
                   },
                 );
               }

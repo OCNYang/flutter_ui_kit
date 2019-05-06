@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/scheduler/ticker.dart';
 import 'package:flutter_ui_kit/other/imgConst.dart';
 
 class CookDetailsPage extends StatefulWidget {
