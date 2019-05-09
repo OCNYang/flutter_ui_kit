@@ -181,7 +181,7 @@ class CookDetailsState extends State<CookDetailsPage> {
           ),
           SliverToBoxAdapter(
             child: Container(
-              height: 50,
+              height: 70,
               margin: EdgeInsets.only(left: 15, right: 15, top: 10, bottom: 10),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
@@ -193,24 +193,28 @@ class CookDetailsState extends State<CookDetailsPage> {
                     ),
                   ),
                   VerticalDivider(width: 10, color: Colors.transparent),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.max,
-                    children: <Widget>[
-                      Text(
-                        'Elorn Causer',
-                        style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
-                      Spacer(
-                        flex: 1,
-                      ),
-                      Text(
-                        "So tasty! can't wait to cook it again 22 Aug,2018to cook it again 22 Aug,2018",
-                        style: TextStyle(color: Colors.grey),
-                        softWrap: true,
-                        maxLines: 2,
-                      ),
-                    ],
+                  // 这里的使用 Expanded 控件占用剩余的宽度空间，不然子控件 Column 的宽度将受其子控件的影响，从而使内部的 Text 显示异常
+                  // 这里需要深思的是 Column Row 此类控件占用空间的方式，并不是占用父控件的最大剩余空间，也受其子控件的影响。
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          'Elorn Causer',
+                          style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
+                        ),
+                        Spacer(
+                          flex: 1,
+                        ),
+                        Text(
+                          "So tasty! can't wait to cook it again 22 Aug,2018to cook it again 22 Aug,2018",
+                          style: TextStyle(color: Colors.grey),
+                          softWrap: true,
+                          maxLines: 2,
+                        ),
+                      ],
+                    ),
+                    flex: 1,
                   ),
                 ],
               ),
@@ -253,7 +257,7 @@ class CookDetailsState extends State<CookDetailsPage> {
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
                 return Padding(
-                  padding: EdgeInsets.only(left: 15,right: 15,top: 5,bottom: 5),
+                  padding: EdgeInsets.only(left: 15, right: 15, top: 5, bottom: 5),
                   child: Text(
                     'AAAAAAAAAAA$index',
                     style: TextStyle(color: Colors.grey),
