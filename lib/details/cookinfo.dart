@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ui_kit/other/imgConst.dart';
 
 class CookInfoPage extends StatefulWidget {
+  final String imgUrl;
+
+  CookInfoPage(this.imgUrl);
+
   @override
   CookInfoState createState() {
     return CookInfoState();
@@ -20,7 +24,7 @@ class CookInfoState extends State<CookInfoPage> {
           AspectRatio(
             aspectRatio: 0.7,
             child: Image.asset(
-              BG_1,
+              IMG_BG,
               fit: BoxFit.cover,
             ),
           ),
@@ -74,7 +78,7 @@ class CookInfoState extends State<CookInfoPage> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15),
                       child: Image.asset(
-                        HEAD,
+                        widget.imgUrl,
                         fit: BoxFit.cover,
                       ),
                     ),

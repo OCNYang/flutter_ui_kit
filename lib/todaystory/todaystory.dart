@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_kit/details/cookinfo.dart';
-import 'package:flutter_ui_kit/other/imgConst.dart';
 
 class TodayStoryTabPage extends StatefulWidget {
   @override
@@ -55,9 +54,15 @@ class TodayStoryTabPageState extends State<TodayStoryTabPage> {
                       color: Colors.transparent,
                     );
                   } else {
-                    return GestureDetector(child: getRecommendedItemView(),onTap: (){
-                      Navigator.push(context, new CupertinoPageRoute(builder: (it)=> CookInfoPage()));
-                    },);
+                    return GestureDetector(
+                      child: getRecommendedItemView(index),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            new CupertinoPageRoute(
+                                builder: (it) => CookInfoPage("asset/images/${index * 5 % 11}.jpg")));
+                      },
+                    );
                   }
                 }),
                 itemCount: 10,
@@ -87,7 +92,7 @@ class TodayStoryTabPageState extends State<TodayStoryTabPage> {
           SliverFixedExtentList(
             delegate: new SliverChildBuilderDelegate(
               (BuildContext context, int index) {
-                return getRecentItemView();
+                return getRecentItemView(index);
               },
               childCount: 15,
             ),
@@ -98,7 +103,7 @@ class TodayStoryTabPageState extends State<TodayStoryTabPage> {
     );
   }
 
-  Widget getRecentItemView() {
+  Widget getRecentItemView(int index) {
     return new Container(
       padding: EdgeInsets.only(left: 20, right: 20, bottom: 10),
       child: Row(
@@ -110,7 +115,7 @@ class TodayStoryTabPageState extends State<TodayStoryTabPage> {
               Radius.circular(5),
             ),
             child: Image(
-              image: AssetImage(HEAD),
+              image: AssetImage("asset/images/${index % 11}.jpg"),
               width: 100,
               fit: BoxFit.cover,
             ),
@@ -145,7 +150,7 @@ class TodayStoryTabPageState extends State<TodayStoryTabPage> {
     );
   }
 
-  Widget getRecommendedItemView() {
+  Widget getRecommendedItemView(int index) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -157,7 +162,7 @@ class TodayStoryTabPageState extends State<TodayStoryTabPage> {
               Radius.circular(5),
             ),
             child: Image(
-              image: AssetImage(HEAD),
+              image: AssetImage("asset/images/${index * 5 % 11}.jpg"),
             ),
           ),
           flex: 1,

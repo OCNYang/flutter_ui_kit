@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_kit/details/cookdetails.dart';
-import 'package:flutter_ui_kit/other/imgConst.dart' show HEAD;
 
 class HowToMakeTabPage extends StatefulWidget {
   @override
@@ -70,17 +69,17 @@ class HowToMakeTabPageState extends State<HowToMakeTabPage> {
             scrollDirection: Axis.horizontal,
             itemCount: 10,
             physics: BouncingScrollPhysics(),
-            itemBuilder: ((BuildContext context, int index) {
-              if (0 == index || 19 == index) {
+            itemBuilder: ((BuildContext context, int position) {
+              if (0 == position || 19 == position) {
                 return VerticalDivider(
                   width: 10,
                   color: Colors.transparent,
                 );
               } else {
                 return GestureDetector(
-                  child: getSectionItem(),
+                  child: getSectionItem(index, position),
                   onTap: () {
-                    Navigator.push(context, new CupertinoPageRoute(builder: (context) => CookDetailsPage()));
+                    Navigator.push(context, new CupertinoPageRoute(builder: (context) => CookDetailsPage("asset/images/${((index + 1) * position) % 11}.jpg")));
                   },
                 );
               }
@@ -97,7 +96,7 @@ class HowToMakeTabPageState extends State<HowToMakeTabPage> {
     );
   }
 
-  Widget getSectionItem() {
+  Widget getSectionItem(int index, int position) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -112,7 +111,7 @@ class HowToMakeTabPageState extends State<HowToMakeTabPage> {
                 alignment: AlignmentDirectional.center,
                 children: <Widget>[
                   Image(
-                    image: AssetImage(HEAD),
+                    image: AssetImage("asset/images/${((index + 1) * position) % 11}.jpg"),
                   ),
                   Icon(
                     Icons.play_circle_filled,

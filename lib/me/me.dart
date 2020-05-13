@@ -44,7 +44,7 @@ class MeTabPageState extends State<MeTabPage> {
                     children: <Widget>[
                       CircleAvatar(
                         radius: 50,
-                        backgroundImage: AssetImage(HEAD),
+                        backgroundImage: AssetImage(IMG_HEAD),
                       ), //Scaffold.of(context).showSnackBar(new SnackBar(content: new Text('edit avatar')));
                       Positioned(
                         bottom: 25 - sin(45) * 25,
@@ -247,18 +247,23 @@ class MeTabPageState extends State<MeTabPage> {
                           if (index == 3) {
                             return Container(
                               width: 30,
-                              alignment:Alignment.center,
+                              alignment: Alignment.center,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.all(Radius.circular(3)),
                                 color: Colors.brown,
                               ),
-                              child: Text('40',style: TextStyle(color: Colors.white70),),
+                              child: Text(
+                                '40',
+                                style: TextStyle(color: Colors.white70),
+                              ),
                             );
                           } else {
                             return ClipRRect(
                               borderRadius: BorderRadius.all(Radius.circular(3)),
                               child: Image.asset(
-                                HEAD,
+                                "asset/images/${index % 11}.jpg",
+                                width: 30,
+                                fit: BoxFit.cover,
                               ),
                             );
                           }

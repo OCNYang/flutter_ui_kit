@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ui_kit/other/imgConst.dart';
 
 class CookDetailsPage extends StatefulWidget {
+  final String imgUrl;
+
+  CookDetailsPage(this.imgUrl);
+
   @override
   CookDetailsState createState() {
     return CookDetailsState();
@@ -9,7 +13,7 @@ class CookDetailsPage extends StatefulWidget {
 }
 
 class CookDetailsState extends State<CookDetailsPage> {
-  List<String> _reviewsImgList = [HEAD, BG_1, HEAD, BG_1];
+  List<String> _reviewsImgList = [IMG1, IMG2, IMG3, IMG4];
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +21,7 @@ class CookDetailsState extends State<CookDetailsPage> {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
-            expandedHeight: 400,
+            expandedHeight: 350,
             pinned: true,
             backgroundColor: Colors.white,
             floating: true,
@@ -35,7 +39,7 @@ class CookDetailsState extends State<CookDetailsPage> {
                 textAlign: TextAlign.center,
               ),
               background: Image.asset(
-                BG_1,
+                widget.imgUrl,
                 fit: BoxFit.cover,
               ),
             ),
@@ -189,7 +193,7 @@ class CookDetailsState extends State<CookDetailsPage> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(5),
                     child: Image.asset(
-                      HEAD,
+                      IMG5,
                     ),
                   ),
                   VerticalDivider(width: 10, color: Colors.transparent),

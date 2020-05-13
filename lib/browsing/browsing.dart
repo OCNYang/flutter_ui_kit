@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_kit/other/imgConst.dart';
 
 class BrowsingTabPage extends StatefulWidget {
   @override
@@ -10,8 +9,6 @@ class BrowsingTabPage extends StatefulWidget {
 }
 
 class BrowsingTabPageState extends State<BrowsingTabPage> with SingleTickerProviderStateMixin {
-  final _tabBgColor = [Colors.brown, Colors.white];
-
   int _currentTabIndex = 0;
   PageController _pageController;
   TabController _tabController;
@@ -176,8 +173,10 @@ class BrowsingTabPageState extends State<BrowsingTabPage> with SingleTickerProvi
         ClipRRect(
           borderRadius: BorderRadius.circular(5),
           child: Image.asset(
-            HEAD,
+            "asset/images/${index % 11}.jpg",
             width: 100,
+            height: 88,
+            fit: BoxFit.cover,
           ),
         ),
         VerticalDivider(

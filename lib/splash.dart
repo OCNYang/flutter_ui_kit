@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
-import 'other/imgConst.dart' show BG_1;
-import 'other/imgConst.dart' show HEAD;
+import 'other/imgConst.dart' show IMG_BG;
+import 'other/imgConst.dart' show IMG_HEAD;
 
 class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DecoratedBox(
       decoration: BoxDecoration(
-        image: DecorationImage(image: AssetImage(BG_1),fit: BoxFit.cover),
+        image: DecorationImage(image: AssetImage(IMG_BG),fit: BoxFit.cover),
         color: Colors.amber,
       ),
       child: Stack(
         children: <Widget>[
           Positioned(
             child: Image.asset(
-              HEAD,
+              IMG_HEAD,
               width: 100,
             ),
             top: 50,
