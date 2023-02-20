@@ -2,11 +2,11 @@
 
 A new Flutter UI Kit.
 
-![cookme](./doc/cookmefreeuikit.jpg)
+![cookme](https://cdn.jsdelivr.net/gh/ocnyang/flutter_ui_kit@master/doc/cookmefreeuikit.jpg)
 
 ## About UI(CookMe)
 
-![cookme](./doc/cookme.png)
+![cookme](https://cdn.jsdelivr.net/gh/ocnyang/flutter_ui_kit@master/doc/cookme.png)
 
 Thanks to [Teks Mobile](https://www.behance.net/teknowledge) for sharing great recipe app UI kit.
 
