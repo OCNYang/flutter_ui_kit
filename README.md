@@ -6,7 +6,7 @@ A new Flutter UI Kit.
 
 ## About UI(CookMe)
 
-![cookme](https://cdn.jsdelivr.net/gh/ocnyang/flutter_ui_kit@master/doc/cookme.png)
+![cookme](./doc/cookme.png)
 
 Thanks to [Teks Mobile](https://www.behance.net/teknowledge) for sharing great recipe app UI kit.
 
